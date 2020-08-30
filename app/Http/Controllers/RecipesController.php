@@ -47,6 +47,13 @@ class RecipesController extends Controller
     public function store(Request $request)
     {
         //
+        $recipe = new Recipe;
+        $recipe->recipe_name = $request->recipe_name;
+        $recipe->content = $request->content;
+        $recipe->img = $request->img;
+        $recipe->save;
+
+        return redirect('/');
     }
 
     /**
