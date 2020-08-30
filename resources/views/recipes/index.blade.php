@@ -12,4 +12,8 @@
     @endforeach
   @endif
 
+  <a href="/recipes/create">新規レシピの投稿</a>
+  <!-- 以下のようにするとリンクがhttps://localhost/recipes/createとなり、うまくつながらない -->
+  <!-- {!! link_to_route('recipes.create', '新規レシピの投稿', [], []) !!} -->
+
 @endsection

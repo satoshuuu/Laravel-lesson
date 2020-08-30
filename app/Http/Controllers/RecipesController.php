@@ -31,6 +31,11 @@ class RecipesController extends Controller
     public function create()
     {
         //
+        $recipe = new Recipe;
+
+        return view('recipes.create', [
+            'recipe' => $recipe,
+        ]);
     }
 
     /**
