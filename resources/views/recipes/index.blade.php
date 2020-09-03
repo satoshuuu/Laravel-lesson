@@ -6,7 +6,8 @@
 
   @if (count($recipes) > 0)
     @foreach ($recipes as $recipe)
-      <h2>{{ $recipe->recipe_title }}</h2>
+    <!-- このリンクだとうまくいかない -->
+      <h2>{!! link_to_route('recipes.show', $recipe->recipe_title, ['id' => $recipe->id]) !!}</h2>
       <img src={{ $recipe->img }} alt="">
       <p>{{ $recipe->content }}</p>
     @endforeach
