@@ -97,6 +97,13 @@ class RecipesController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $recipe = Recipe::find($id);
+        $recipe->recipe_title = $request->recipe_title;
+        $recipe->img = $request->img;
+        $recipe->content = $request->content;
+        $recipe->save();
+
+        return redirect('/');
     }
 
     /**
