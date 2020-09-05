@@ -8,5 +8,6 @@
   <p>{{ $recipe->content }}</p>
 </div>
 
+{!! link_to_route('(recipes.edit', 'このレシピを編集', ['id' => $recipe->id]) !!}
 
 @endsection
