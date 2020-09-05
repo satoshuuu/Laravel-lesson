@@ -51,7 +51,7 @@ class RecipesController extends Controller
         $recipe->recipe_name = $request->recipe_name;
         $recipe->content = $request->content;
         $recipe->img = $request->img;
-        $recipe->save;
+        $recipe->save();
 
         return redirect('/');
     }
