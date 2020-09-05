@@ -80,6 +80,11 @@ class RecipesController extends Controller
     public function edit($id)
     {
         //
+        $recipe = Recipe::find($id);
+
+        return view('recipes.edit', [
+            'recipe' => $recipe,
+        ]);
     }
 
     /**
