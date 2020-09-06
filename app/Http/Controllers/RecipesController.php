@@ -48,7 +48,7 @@ class RecipesController extends Controller
     {
         //
         $recipe = new Recipe;
-        $recipe->recipe_name = $request->recipe_name;
+        $recipe->recipe_title = $request->recipe_title;
         $recipe->content = $request->content;
         $recipe->img = $request->img;
         $recipe->save();
