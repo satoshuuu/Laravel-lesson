@@ -115,5 +115,9 @@ class RecipesController extends Controller
     public function destroy($id)
     {
         //
+        $recipe = Recipe::find($id);
+        $recipe->delete();
+
+        return redirect('/');
     }
 }
